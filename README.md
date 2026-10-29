@@ -391,7 +391,4 @@ Dataset licenses are separate and set by their owners.
 - Souvik Sarkar
 - Tanmay Paul
 - Tavishi
-
-- Course - IPCV
-- Institute - MNNIT
 <!-- Add your name(s), course (IPCV), institute and contact here. -->
