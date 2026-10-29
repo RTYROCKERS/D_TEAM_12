@@ -383,15 +383,15 @@ See Section 10 of the report for details.
 
 ## License
 
-Add a license of your choice (e.g. MIT) as `LICENSE` in the repo root. Dataset licenses are separate and set by their owners.
+Dataset licenses are separate and set by their owners.
 
 ## Authors
 
-Ruchir Tripathi
-Souvik Sarkar
-Tanmay Paul
-Tavishi
+- Ruchir Tripathi
+- Souvik Sarkar
+- Tanmay Paul
+- Tavishi
 
-Course - IPCV
-Institute - MNNIT
+- Course - IPCV
+- Institute - MNNIT
 <!-- Add your name(s), course (IPCV), institute and contact here. -->
