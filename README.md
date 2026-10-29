@@ -40,19 +40,50 @@ Detecting potholes in low-light and nighttime road images with **YOLO11m** (Ultr
 ## Repository Structure
 
 ```
-.
+D_TEAM_12/
 ├── README.md
-├── ipcv-project-2.ipynb                              # Full pipeline: EDA → train → evaluate → figures
-├── Nighttime_Pothole_Detection_Final_Report.docx     # Final report with all tables and discussion
-└── assets/                                           # Figures used in this README
-    ├── synthetic_vs_real_eda.png
-    ├── training_curves.png
-    ├── model_comparison.png
-    ├── pr_curve_real.png
-    └── qualitative_real_1.jpg
+├── Nighttime_Pothole_Detection_Final_Report.docx      # Final report with all tables and discussion
+├── assets/                                            # Figures used in this README
+│   ├── day_dusk_night_deepnight.png
+│   ├── model_comparison.png
+│   ├── pr_curve_real.png
+│   ├── qualitative_real_1.jpg
+│   ├── synthetic_vs_real_eda.png
+│   └── training_curves.png
+├── Dataset/
+│   ├── Original Dataset/                              # Raw dataset before processing
+│   │   ├── data.yaml
+│   │   ├── README.dataset.txt
+│   │   ├── README.roboflow.txt
+│   │   ├── train/
+│   │   │   ├── images/
+│   │   │   └── labels/
+│   │   ├── valid/
+│   │   │   ├── images/
+│   │   │   └── labels/
+│   │   └── test/
+│   │       ├── images/
+│   │       └── labels/
+│   └── Final Dataset/                                 # Processed single-class pothole dataset (YOLO format)
+│       ├── data.yaml
+│       ├── train/
+│       │   ├── images/
+│       │   └── labels/
+│       ├── valid/
+│       │   ├── images/
+│       │   └── labels/
+│       └── test/
+│           ├── images/
+│           └── labels/
+└── Source Codes/
+    ├── ipcv-project-2.ipynb                           # Full pipeline: EDA → train → evaluate → figures
+    ├── night_sim.ipynb                                # Nighttime simulation / synthetic data generation
+    ├── 100_640_nano.ipynb                             # YOLO11n experiment (100 epochs, 640 imgsz)
+    ├── 100_640_small.ipynb                            # YOLO11s experiment (100 epochs, 640 imgsz)
+    └── 100_640_medium.ipynb                           # YOLO11m experiment (100 epochs, 640 imgsz)
 ```
 
-> Datasets and trained weights are **not** stored in this repo (see [Datasets](#datasets)).
+> Trained weights are **not** stored in this repo.
 
 ---
 
