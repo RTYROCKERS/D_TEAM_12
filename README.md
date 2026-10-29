@@ -71,7 +71,7 @@ Derived from a three-class dataset (crocodile crack, longitudinal crack, pothole
 
 - Kept images with at least one pothole (including images that also had cracks); removed crack-only images.
 - Removed crack annotations; kept only pothole boxes and remapped pothole class ID `2 → 0` (`nc = 1`).
-- Created the night appearance by adjusting brightness, contrast and colour only. No geometric transforms, so the boxes stay valid.
+- Created the night appearance by adjusting brightness, contrast and colour only. No geometric transforms, so the boxes stay valid. The synthesis applies brightness scaling, contrast adjustment, and colour modification to generate dusk, night, and deep-night variants without geometric transformations, preserving the original bounding-box coordinates.
 
 | Split | Images | Pothole instances |
 |---|---|---|
@@ -81,6 +81,14 @@ Derived from a three-class dataset (crocodile crack, longitudinal crack, pothole
 | **Total** | **2,679** | **7,270** |
 
 All images are 640 × 640. The integrity check found no unlabeled images, orphan labels, empty labels, corrupt images or out-of-bound coordinates.
+
+To simulate varying low-light conditions, road images were transformed into progressively darker lighting conditions: dusk, night, and deep night. Existing pothole bounding boxes were retained throughout the transformation, since the process modifies image appearance rather than road geometry.
+
+![Pothole images transformed from daytime to dusk, night, and deep-night conditions, with bounding-box annotations](assets/day_dusk_night_deepnight.png)
+
+*Figure: Examples of the same road scenes under daytime, dusk, night, and deep-night conditions. Green rectangles indicate the retained pothole annotations. The examples also illustrate how aggressive darkening can reduce pothole visibility.*
+
+The synthetic training data incorporates a mixture of dusk and night appearances to expose the detector to different levels of illumination rather than a single fixed brightness level.
 
 ### 2. Real night dataset (`night-potholes-yolov8-format`)
 
